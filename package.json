@@ -1,0 +1,17 @@
+{
+  "name": "pizzaporal",
+  "version": "1.0.0",
+  "bin": {
+    "my-pizzeria": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "jest"
+  },
+  "author": "Paul Lassasseigne",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@caporal/core": "^2.0.7"
+  }
+}
