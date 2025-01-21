@@ -26,9 +26,9 @@ function checkReservation(program) {
       }
 
       if (results.length === 0) {
-        logger.info(
+        logger.error(
           formattingText(
-            `No reservations associated with the name ${colors.yellow.bold(name)}.` + "\n"
+            colors.red(`No reservations associated with the name ${colors.bold(name)}.`) + "\n"
           )
         );
       } else {
