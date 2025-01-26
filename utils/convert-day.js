@@ -12,6 +12,8 @@ function convertDay(day) {
   for (const [key, value] of Object.entries(days)) {
     if (day === value) {
       return key;
+    } else if (day === key) {
+      return value;
     }
   }  
 }
