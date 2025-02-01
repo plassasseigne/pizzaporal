@@ -47,7 +47,7 @@ function getPizza(program) {
 
       if (pizzaList.length !== 0) {
         const newPizzaList = pizzaList.reduce((accumulator, current) => {
-          const isInList = accumulator.find(item => item.pizza === current.pizza);
+          const isInList = accumulator.find(item => item.name === current.name);
         
           if (isInList) {
             isInList.quantity += current.quantity;
@@ -61,7 +61,7 @@ function getPizza(program) {
         let finalList = "";
 
         for (const pizza of newPizzaList) {
-          finalList += colors.white(`- ${colors.bold(pizza.pizza)} | ${colors.green(pizza.quantity)} ordered \n`);
+          finalList += colors.white(`- ${colors.bold(pizza.name)} | ${colors.green(pizza.quantity)} ordered \n`);
         }
 
         logger.info(

@@ -96,7 +96,7 @@ function parseReservations() {
           const [pizzaName, qtyStr] = pizza.trim().split(/\s+x/);
 
           return {
-            pizza: pizzaName.trim(),
+            name: pizzaName.trim(),
             quantity: parseInt(qtyStr, 10),
           };
         });

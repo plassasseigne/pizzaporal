@@ -84,13 +84,13 @@ function addReservation(program) {
 
       let reservation = `1,P=${people},D=${day} ${hour},N=${name},T=${table}`;
       if (orderedPizzas.length !== 0) {
-        reservation += ",Z=" + orderedPizzas.map(i => `${i.pizza} x${i.quantity}`).join(", ") + "//";
+        reservation += ",Z=" + orderedPizzas.map(i => `${i.name} x${i.quantity}`).join(", ") + "//";
       }
 
       let pizzaList = "";
 
       for (const item of orderedPizzas) {
-        pizzaList += `  • ${colors.bold.green(item.pizza + " x" + item.quantity)} \n`;
+        pizzaList += `  • ${colors.bold.green(item.name + " x" + item.quantity)} \n`;
       }
       
       try {
