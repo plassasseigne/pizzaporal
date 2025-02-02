@@ -1,4 +1,4 @@
-const { parseReservations } = require("../utils/parser");
+const parseReservations = require("../utils/parser");
 const colors = require("colors");
 const formattingText = require("../utils/formatting-text");
 const convertDay = require("../utils/convert-day");

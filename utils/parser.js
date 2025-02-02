@@ -111,6 +111,4 @@ function parseReservations() {
   return results;
 }
 
-module.exports = {
-  parseReservations,
-};
+module.exports = parseReservations;
