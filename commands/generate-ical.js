@@ -25,7 +25,7 @@ function generateICal(program) {
       if (clientReservations.length === 0) {
         logger.error(
           formattingText(
-            colors.red(`No reservations associated with the name ${colors.bold(name)}.`) + "\n"
+            colors.red(`No reservations associated with the name ${colors.bold(args.name)}.`) + "\n"
           )
         );
         return;
