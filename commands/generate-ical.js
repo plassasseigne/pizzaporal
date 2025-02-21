@@ -67,7 +67,8 @@ function generateICal(program) {
           return;
         }
 
-        const outputPath = options.output || "../reservation.ics";
+        const outputPath = options.output || "./reservation.ics";
+
         try {
           fs.writeFileSync(outputPath, value, "utf8");
           logger.info(
