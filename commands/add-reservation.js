@@ -12,7 +12,17 @@ function addReservation(program) {
     .action(async ({ logger, args }) => {
       const filePath = path.join(__dirname, "..", "data", "reservation.rps");
       const name = args.name;
-      const table = "TABLE" + Math.floor(Math.random() * 26);
+      let table = Math.floor(Math.random() * 10);
+
+      if (table === 0) {
+        table++;
+        table = "TABLE0" + table;
+      } else if (table !== 10) {
+        table = "TABLE0" + table;
+      } else {
+        table = "TABLE" + table;
+      }
+
       let orderedPizzas = [];
 
       const people = await input({
@@ -73,8 +83,8 @@ function addReservation(program) {
             validate: (value) => !isNaN(value) && value > 0 || "Please enter a valid number."
           })
   
-          orderedPizzas.push({ pizza, quantity });
-  
+          orderedPizzas.push({ name: pizza, quantity });
+
           addMorePizza = await confirm({
             message: "Do you want to add more pizzas ?",
             default: false
