@@ -1,3 +1,9 @@
+/**
+ * Converts reservation data into the rps specific string format.
+ *
+ * @param {Array} reservations - An array of reservation groups. Each group contains a group name and an array of reservations.
+ * @returns {string} - The rps formatted string representing the reservation data.
+ */
 function fromDataToRps(reservations) {
   let output = "";
 
