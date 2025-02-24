@@ -12,9 +12,9 @@ const dayMapping = {
 /**
  * Get the date of the next day corresponding to the given letter and time.
  * 
- * @param {string} dayCode Reservation day
- * @param {string} time Reservation time in format "HH:MM"
- * @returns {Date} The occurrence date of the reservation day
+ * @param {string} dayCode - Reservation day
+ * @param {string} time - Reservation time in format "HH:MM"
+ * @returns {Date} - The occurrence date of the reservation day
  */
 function getNextOccurrence(dayCode, time) {
   const targetDow = dayMapping[dayCode];

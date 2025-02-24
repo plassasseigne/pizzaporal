@@ -3,10 +3,20 @@ const colors = require("colors");
 const formattingText = require("../utils/formatting-text");
 const convertDay = require("../utils/convert-day");
 
+/**
+ * Returns pizzas ordered during the week or on a specific day.
+ *
+ * @param {Object} args - Arguments passed to the command.
+ * @param {string} [args.day] - The specific day of the week.
+ * 
+ * @example
+ * node bin/cli.js getpizza
+ * node bin/cli.js getpizza "Monday"
+ */
 function getPizza(program) {
   program
-    .command("getpizza", "Returns pizzas ordered during the week or on a specific day")
-    .argument("[day]", "The specific day of the week")
+    .command("getpizza", "Returns pizzas ordered during the week or on a specific day.")
+    .argument("[day]", "The specific day of the week.")
     .action(({ logger, args }) => {
       const reservations = parseReservations();
       const day = args.day;
