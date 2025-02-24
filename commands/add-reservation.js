@@ -5,6 +5,14 @@ const colors = require("colors");
 const formattingText = require("../utils/formatting-text");
 const convertDay = require('../utils/convert-day');
 
+/**
+ * Adds a new reservation to the reservations file.
+ *
+ * @param {string} args.name - The reservation name.
+ * 
+ * @example
+ * node bin/cli.js addreservation "Doe"
+ */
 function addReservation(program) {
   program
     .command("addreservation", "Add a new reservation to the reservations file.")

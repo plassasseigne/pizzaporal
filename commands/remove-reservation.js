@@ -6,6 +6,12 @@ const formattingText = require("../utils/formatting-text");
 const colors = require("colors");
 const path = require("path");
 
+/**
+ * Removes a reservation from the reservation file.
+ * 
+ * @example
+ * node bin/cli.js removereservation
+ */
 function removeReservation(program) {
   program
     .command("removereservation", "Remove a reservation from the reservatiion file.")

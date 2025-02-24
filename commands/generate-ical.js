@@ -5,6 +5,17 @@ const { createEvents } = require("ics");
 const fs = require("fs");
 const colors = require("colors");
 
+/**
+ * Generates an iCalendar file from the name of one or more reservations.
+ *
+ * @param {string} args.name - Name of the reservation.
+ * @param {string} [options.output] - Output path for the iCalendar file.
+ * 
+ * @example
+ * node bin/cli.js generateical "Doe"
+ * node bin/cli.js generateical "Doe" --output "C:\Users\johndoe\Documents\pizza.ics"
+ *
+ */
 function generateICal(program) {
   program
     .command("generateical", "Generates an icalendar file from the name of one or more reservations.")

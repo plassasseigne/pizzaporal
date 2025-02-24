@@ -2,6 +2,14 @@ const parseReservations = require("../utils/parser");
 const colors = require("colors");
 const formattingText = require("../utils/formatting-text");
 
+/**
+ * Returns the table(s) associated with the name of the reservation.
+ *
+ * @param {string} args.name - Name of the reservation to check.
+ * 
+ * @example
+ * node bin/cli.js checkreservation "Doe"
+ */
 function checkReservation(program) {
   program
     .command("checkreservation", "Returns the table(s) associated with the name of the reservation")

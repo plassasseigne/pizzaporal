@@ -3,6 +3,14 @@ const colors = require("colors");
 const parseReservations = require("../utils/parser");
 const convertDay = require("../utils/convert-day");
 
+/**
+ * Returns the details of a table with its reserved slots.
+ *
+ * @param {string} args.table - The number of the table to check.
+ * 
+ * @example
+ * node bin/cli.js checktable 9
+ */
 function checkTable(program) {
   program
     .command("checktable", "Returns the details of a table with its reserved slots")
