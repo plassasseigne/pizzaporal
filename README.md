@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/plassasseigne/pizzaporal">
-    <img src="images/logo.png" alt="Logo" width="120" height="120">
+    <img src="images/logo.png" alt="Logo" width="124" height="136">
   </a>
 
   <h3 align="center">Pizzaporal Reservation Management System - CLI</h3>
